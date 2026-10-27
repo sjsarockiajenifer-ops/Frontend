@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.head{
+    background-color: azure;
+    color: black;
+    display: inline-block;
+    width: 100vw;
+height: 100vh;
+
+}
+.logo{
+    display: inline;
+}
+.searchbox{
+    display: inline-block;
+}
