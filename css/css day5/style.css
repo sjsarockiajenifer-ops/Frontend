@@ -1,0 +1,172 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 30px;
+            justify-content: center;
+        }
+        .child2{
+            background-color: rgb(165, 165, 109);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+        .child3{
+            background-color: rgb(160, 168, 227);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+        .child4{
+            background-color: rgb(105, 212, 81);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+        .child5{
+            background-color: rgb(216, 141, 104);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+        .child6{
+            background-color: rgb(144, 189, 216);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .title{
+            background-color: rgb(204, 204, 230);
+            color: black;
+            margin: 2px;
+            padding:10px;
+            box-sizing: border-box;
+            display: inline;
+            display: flex;
+            text-align: center;
+            gap: 30px;
+            border: 2px solid;
+        }
+
+        .box1{
+            background-color: rgb(160, 168, 227);
+            color: black;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            padding: 40px;
+             border: 2px solid;
+        }
+           .box2{
+            background-color: rgb(105, 212, 81);
+            color: black;
+             width: 300px;
+            height: 200px;
+            text-align: center;
+            padding: 40px;
+             border: 2px solid;
+        }
+           .box3{
+            background-color: rgb(216, 141, 104);
+            color: black;
+             width: 300px;
+            height: 200px;
+            text-align: center;
+            padding: 40px;
+             border: 2px solid;
+        }
+           .box4{
+            background-color: rgb(144, 189, 216);
+            color: black;
+             width: 300px;
+            height: 200px;
+            text-align: center;
+            padding: 40px;
+             border: 2px solid;
+        }
+
+
+        .class{
+            background-color: rgb(195, 178, 211);
+            color: black;
+            display: block;
+            padding: 10px;
+            border: 2px;
+            display: flex;
+            text-align: center;
+
+        }
+
+        .flex1{
+            background-color: rgb(165, 165, 109);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+            gap: 30px;
+        }
+        .flex2{
+            background-color: rgb(160, 168, 227);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+            gap: 30px;
+        }
+        .flex3{
+            background-color: rgb(105, 212, 81);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+        .flex4{
+            background-color: rgb(216, 141, 104);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+        .flex5{
+            background-color: rgb(144, 189, 216);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+        .flex6{
+            background-color: rgb(216, 141, 104);
+            color: black;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding: 40px;
+        }
+        

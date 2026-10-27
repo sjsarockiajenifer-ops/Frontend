@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Future Hub – Multi-Model AI Platform (2030 Vision)</title>
+  <meta name="description" content="Explore AI. Build with AI. Prepare for the Future. A unified multi-model AI platform integrating OpenAI, Claude, and Gemini with model comparison arena, coding suite, 2030 future technology observatory, and full-stack AI developer roadmap." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              openai: '#10a37f',
+              claude: '#d97706',
+              gemini: '#8b5cf6',
+              cyan: '#06b6d4',
+              indigo: '#6366f1'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Space Grotesk & Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Marked.js Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Prism.js Code Syntax Highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#060913] text-slate-100 min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200">
+  
+  <!-- Root App Shell -->
+  <div id="app-root" class="min-h-screen flex flex-col">
+    <!-- Loading Splash State -->
+    <div class="flex h-screen items-center justify-center">
+      <div class="text-center space-y-4">
+        <div class="relative flex h-16 w-16 mx-auto items-center justify-center rounded-2xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-[1px] shadow-2xl shadow-indigo-500/30 animate-pulse">
+          <div class="flex h-full w-full items-center justify-center rounded-2xl bg-[#060913]">
+            <svg class="h-8 w-8 text-cyan-400 animate-spin" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="font-display text-xl font-bold text-white tracking-tight">AI Future Hub</div>
+        <div class="text-xs text-slate-400 font-mono">Initializing Multi-Model Orchestration...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Datasets & Configuration -->
+  <script src="js/config.js"></script>
+  <script src="js/data/futureScenarios.js"></script>
+  <script src="js/data/roadmapSkills.js"></script>
+  <script src="js/data/presetPrompts.js"></script>
+  <script src="js/services/mockData.js"></script>
+  <script src="js/services/aiService.js"></script>
+  <script src="js/state.js"></script>
+
+  <!-- Application UI Components -->
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/components/futureView.js"></script>
+  <script src="js/components/arenaView.js"></script>
+  <script src="js/components/chatView.js"></script>
+  <script src="js/components/codingView.js"></script>
+  <script src="js/components/roadmapView.js"></script>
+  <script src="js/components/researchView.js"></script>
+  <script src="js/components/dashboardView.js"></script>
+  <script src="js/components/keyVaultModal.js"></script>
+
+  <!-- Application Coordinator -->
+  <script src="js/app.js"></script>
+</body>
+</html>

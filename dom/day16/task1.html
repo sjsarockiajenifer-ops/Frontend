@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+
+        <form id="employeeForm">
+            <label for="name">Employee Name</label>
+            <input type="text" id="name" placeholder="Enter employee name" required>
+
+            <label for="age">Employee Age</label>
+            <input type="number" id="age" placeholder="Enter age" min="1" required>
+
+            <label for="department">Department</label>
+            <input type="text" id="department" placeholder="Enter department" required>
+
+            <label for="salary">Salary</label>
+            <input type="number" id="salary" placeholder="Enter salary" min="0.01" step="any" required>
+
+            <button type="submit">Add Employee</button>
+        </form>
+        <h2>Employee Details</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="employeeTable"></tbody>
+        </table>
+
+        <p id="message"></p>
+    </div>
+    <script src="task1.js"></script>
+</body>
+</html>
