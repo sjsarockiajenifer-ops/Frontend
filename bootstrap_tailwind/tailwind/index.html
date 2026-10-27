@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Tasks</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ecfeff;
+        }
+
+        header {
+            position: relative;
+            background-color: #cffafe;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 2px solid #a5f3fc;
+        }
+
+        h1 {
+            color: #0e7490;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #0891b2;
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #155e75;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .day-card {
+            background-color: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+            min-height: 220px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(14, 116, 144, 0.20);
+            border-color: #22d3ee;
+            background-color: #f6feff;
+        }
+
+        .day-image {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            transition: 0.4s ease;
+        }
+
+        .day-card:hover .day-image {
+            transform: rotate(8deg) scale(1.12);
+        }
+
+        .day-card h2 {
+            margin: 5px 0 15px;
+            color: #0e7490;
+            font-size: 20px;
+        }
+
+        .task {
+            display: block;
+            width: 100%;
+            background-color: #0891b2;
+            color: white;
+            text-align: center;
+            padding: 11px;
+            margin-top: 12px;
+            border-radius: 22px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .task:hover {
+            background-color: #155e75;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(14, 116, 144, 0.25);
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                width: 90%;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            header {
+                padding-top: 55px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .back-btn {
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .back-btn:hover {
+                transform: translateX(-50%) scale(1.05);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../../index.html" class="back-btn">← Back to Hub</a>
+        <h1>🌊 Tailwind CSS Tasks</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Day 1 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS Logo"
+                class="day-image"
+            >
+            <h2>Day-1</h2>
+            <a href="day1/task1.html" class="task">Meesho Clone (task1.html)</a>
+        </div>
+
+        <!-- Project Antigravity -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS Logo"
+                class="day-image"
+            >
+            <h2>Project Antigravity</h2>
+            <a href="day4/projectantigravity/frontend/index.html" class="task">Home Portal</a>
+            <a href="day4/projectantigravity/frontend/dashboard.html" class="task">Dashboard</a>
+            <a href="day4/projectantigravity/frontend/login.html" class="task">Login</a>
+            <a href="day4/projectantigravity/frontend/register.html" class="task">Register</a>
+            <a href="day4/projectantigravity/frontend/analysis.html" class="task">Analytics</a>
+            <a href="day4/projectantigravity/frontend/transactions.html" class="task">Transactions</a>
+        </div>
+
+        <!-- Project Auth -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS Logo"
+                class="day-image"
+            >
+            <h2>Arena Project</h2>
+            <a href="bootstrap/projectauthentication/index.html" class="task">Authentication &amp; Arena</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

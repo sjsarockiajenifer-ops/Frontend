@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fffbeb;
+        }
+
+        header {
+            position: relative;
+            background-color: #fef3c7;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 2px solid #fde68a;
+        }
+
+        h1 {
+            color: #b45309;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #d97706;
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #78350f;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .section-title {
+            grid-column: 1 / -1;
+            font-size: 20px;
+            font-weight: bold;
+            color: #92400e;
+            padding-bottom: 8px;
+            border-bottom: 2px dashed #fcd34d;
+            margin-top: 15px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .day-card {
+            background-color: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+            min-height: 220px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(180, 83, 9, 0.20);
+            border-color: #f59e0b;
+            background-color: #fffdf5;
+        }
+
+        .day-image {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            transition: 0.4s ease;
+        }
+
+        .day-card:hover .day-image {
+            transform: rotate(8deg) scale(1.12);
+        }
+
+        .day-card h2 {
+            margin: 5px 0 15px;
+            color: #b45309;
+            font-size: 20px;
+        }
+
+        .task {
+            display: block;
+            width: 100%;
+            background-color: #d97706;
+            color: white;
+            text-align: center;
+            padding: 11px;
+            margin-top: 12px;
+            border-radius: 22px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .task:hover {
+            background-color: #78350f;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(180, 83, 9, 0.25);
+        }
+
+        .dom-task {
+            background-color: #059669;
+        }
+
+        .dom-task:hover {
+            background-color: #065f46;
+            box-shadow: 0 4px 10px rgba(5, 150, 105, 0.25);
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                width: 90%;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            header {
+                padding-top: 55px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .back-btn {
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .back-btn:hover {
+                transform: translateX(-50%) scale(1.05);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html" class="back-btn">← Back to Hub</a>
+        <h1>⚡ JavaScript Tasks</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="section-title">Core JavaScript (Days 1 to 11)</div>
+
+        <!-- Day 1 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-1</h2>
+            <a href="day1/index.html" class="task">Basics (index.html)</a>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-2</h2>
+            <a href="day2/task1.html" class="task">Task-1</a>
+            <a href="day2/task2.html" class="task">Task-2</a>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-3</h2>
+            <a href="day3/task1.html" class="task">Task-1</a>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-4</h2>
+            <a href="day4/task1.html" class="task">Task-1</a>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-5</h2>
+            <a href="day5/task1.html" class="task">Task-1</a>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-6</h2>
+            <a href="day6/taask1.html" class="task">Task-1</a>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-7</h2>
+            <a href="day7/task1.html" class="task">Task-1</a>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-8</h2>
+            <a href="day8/task1.html" class="task">Task-1</a>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-9</h2>
+            <a href="day9/task1.html" class="task">Task-1</a>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-10</h2>
+            <a href="day10/task1.html" class="task">Task-1</a>
+        </div>
+
+        <!-- Day 11 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript Logo"
+                class="day-image"
+            >
+            <h2>Day-11</h2>
+            <a href="day11/task1.html" class="task">Task-1</a>
+        </div>
+
+        <div class="section-title">DOM Manipulation (Days 12 to 18)</div>
+
+        <!-- Day 12 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="DOM Logo"
+                class="day-image"
+            >
+            <h2>Day-12</h2>
+            <a href="../dom/day12/task1.html" class="task dom-task">Task-1 (DOM Tree)</a>
+        </div>
+
+        <!-- Day 13 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="DOM Logo"
+                class="day-image"
+            >
+            <h2>Day-13</h2>
+            <a href="../dom/day13/task1.html" class="task dom-task">Task-1 (Events)</a>
+        </div>
+
+        <!-- Day 14 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="DOM Logo"
+                class="day-image"
+            >
+            <h2>Day-14</h2>
+            <a href="../dom/day14/task1.html" class="task dom-task">Task-1 (Styling)</a>
+        </div>
+
+        <!-- Day 15 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="DOM Logo"
+                class="day-image"
+            >
+            <h2>Day-15</h2>
+            <a href="../dom/day15/task1.html" class="task dom-task">Task-1</a>
+            <a href="../dom/day15/task2.html" class="task dom-task">Task-2</a>
+        </div>
+
+        <!-- Day 16 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="DOM Logo"
+                class="day-image"
+            >
+            <h2>Day-16</h2>
+            <a href="../dom/day16/task1.html" class="task dom-task">Task-1 (Inputs)</a>
+        </div>
+
+        <!-- Day 17 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="DOM Logo"
+                class="day-image"
+            >
+            <h2>Day-17</h2>
+            <a href="../dom/day17/task1.html" class="task dom-task">Task-1 (Validation)</a>
+        </div>
+
+        <!-- Day 18 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="DOM Logo"
+                class="day-image"
+            >
+            <h2>Day-18</h2>
+            <a href="../dom/day18/task1.html" class="task dom-task">Task-1</a>
+            <a href="../dom/task1.html" class="task dom-task">Quick Task</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

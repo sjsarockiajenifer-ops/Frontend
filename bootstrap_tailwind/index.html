@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap &amp; Tailwind CSS Tasks</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+        }
+
+        header {
+            position: relative;
+            background: linear-gradient(135deg, #f3e8ff, #cffafe);
+            padding: 25px;
+            text-align: center;
+            border-bottom: 2px solid #cbd5e1;
+        }
+
+        h1 {
+            color: #1e293b;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #475569;
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0f172a;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        .day-card {
+            background-color: white;
+            padding: 26px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+            min-height: 220px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+        }
+
+        .bootstrap-card:hover {
+            border-color: #a855f7;
+            background-color: #faf5ff;
+        }
+
+        .tailwind-card:hover {
+            border-color: #22d3ee;
+            background-color: #ecfeff;
+        }
+
+        .day-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 12px;
+            transition: 0.4s ease;
+        }
+
+        .day-card:hover .day-image {
+            transform: rotate(8deg) scale(1.12);
+        }
+
+        .day-card h2 {
+            margin: 5px 0 15px;
+            font-size: 22px;
+        }
+
+        .bootstrap-card h2 {
+            color: #6d28d9;
+        }
+
+        .tailwind-card h2 {
+            color: #0e7490;
+        }
+
+        .task {
+            display: block;
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 22px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .bootstrap-btn {
+            background-color: #7c3aed;
+        }
+
+        .bootstrap-btn:hover {
+            background-color: #4c1d95;
+            box-shadow: 0 4px 10px rgba(109, 40, 217, 0.25);
+        }
+
+        .tailwind-btn {
+            background-color: #0891b2;
+        }
+
+        .tailwind-btn:hover {
+            background-color: #155e75;
+            box-shadow: 0 4px 10px rgba(14, 116, 144, 0.25);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            header {
+                padding-top: 55px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .back-btn {
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .back-btn:hover {
+                transform: translateX(-50%) scale(1.05);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html" class="back-btn">← Back to Hub</a>
+        <h1>🎨 Bootstrap &amp; Tailwind CSS Hub</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Bootstrap -->
+        <div class="day-card bootstrap-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap Logo"
+                class="day-image"
+            >
+            <h2>Bootstrap Tasks</h2>
+            <p style="color: #64748b; font-size: 13px; margin-bottom: 16px;">Grid system, components, and responsive cards</p>
+            <a href="bootstrap/index.html" class="task bootstrap-btn">Open Bootstrap Index →</a>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div class="day-card tailwind-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind CSS Logo"
+                class="day-image"
+            >
+            <h2>Tailwind CSS Tasks</h2>
+            <p style="color: #64748b; font-size: 13px; margin-bottom: 16px;">Utility-first design, Meesho clone, and Project Antigravity</p>
+            <a href="tailwind/index.html" class="task tailwind-btn">Open Tailwind Index →</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

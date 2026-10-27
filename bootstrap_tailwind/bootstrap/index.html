@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Tasks</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #faf5ff;
+        }
+
+        header {
+            position: relative;
+            background-color: #f3e8ff;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 2px solid #e9d5ff;
+        }
+
+        h1 {
+            color: #6d28d9;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #7c3aed;
+            color: white;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #4c1d95;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .day-card {
+            background-color: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+            min-height: 220px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 22px rgba(109, 40, 217, 0.20);
+            border-color: #a855f7;
+            background-color: #fdfcff;
+        }
+
+        .day-image {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            transition: 0.4s ease;
+        }
+
+        .day-card:hover .day-image {
+            transform: rotate(8deg) scale(1.12);
+        }
+
+        .day-card h2 {
+            margin: 5px 0 15px;
+            color: #6d28d9;
+            font-size: 20px;
+        }
+
+        .task {
+            display: block;
+            width: 100%;
+            background-color: #7c3aed;
+            color: white;
+            text-align: center;
+            padding: 11px;
+            margin-top: 12px;
+            border-radius: 22px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .task:hover {
+            background-color: #4c1d95;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(109, 40, 217, 0.25);
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                width: 90%;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            header {
+                padding-top: 55px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .back-btn {
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .back-btn:hover {
+                transform: translateX(-50%) scale(1.05);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../../index.html" class="back-btn">← Back to Hub</a>
+        <h1>🅱️ Bootstrap Tasks</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Intro & Fundamentals -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap Logo"
+                class="day-image"
+            >
+            <h2>Fundamentals</h2>
+            <a href="bs.html" class="task">Bootstrap Demo (bs.html)</a>
+            <a href="tail.html" class="task">Comparison View (tail.html)</a>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap Logo"
+                class="day-image"
+            >
+            <h2>Day-2</h2>
+            <a href="day2/task1.html" class="task">Task-1 (Grid &amp; Components)</a>
+        </div>
+
+        <!-- Full Project -->
+        <div class="day-card">
+            <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap Logo"
+                class="day-image"
+            >
+            <h2>Project</h2>
+            <a href="projectauthentication/index.html" class="task">Authentication &amp; Arena App</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
