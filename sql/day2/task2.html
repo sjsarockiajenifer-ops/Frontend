@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 - Task 2 | SQL</title>
+
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Arial, sans-serif; background-color: #f0fbff; color: #333; }
+        header { position: relative; background-color: #d9f5fb; padding: 25px; text-align: center; border-bottom: 2px solid #b7edf7; }
+        h1 { color: #087e9b; margin: 0; font-size: 28px; }
+        .back-btn { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background-color: #087e9b; color: white; text-decoration: none; padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: bold; transition: 0.3s ease; }
+        .back-btn:hover { background-color: #16a6c2; transform: translateY(-50%) scale(1.05); }
+        .container { width: 85%; max-width: 800px; margin: 40px auto; }
+        .card { background-color: white; padding: 30px; border-radius: 15px; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10); border: 2px solid #61d4e8; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #e0f2fe; padding-bottom: 12px; }
+        .card-title { color: #087e9b; font-size: 20px; font-weight: bold; margin: 0; }
+        .badge { background-color: #e0f2fe; color: #087e9b; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+        .code-box { background-color: #0f172a; border-radius: 10px; padding: 16px; border: 1px solid #1e293b; color: #e2e8f0; font-family: 'Consolas', 'Courier New', monospace; font-size: 13.5px; line-height: 1.6; position: relative; }
+        .code-top-bar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; margin-bottom: 12px; border-bottom: 1px solid #334155; font-size: 12px; color: #38bdf8; font-weight: bold; }
+        .copy-btn { background-color: #1e293b; color: #f1f5f9; border: 1px solid #475569; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .copy-btn:hover { background-color: #087e9b; border-color: #087e9b; }
+        pre { margin: 0; white-space: pre-wrap; word-break: break-word; }
+        .kw { color: #f43f5e; font-weight: bold; }
+        .fn { color: #38bdf8; font-weight: bold; }
+        .str { color: #10b981; }
+        .num { color: #f59e0b; }
+        .btn-group { display: flex; gap: 12px; margin-top: 20px; }
+        .action-btn { background-color: #16a6c2; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: bold; transition: 0.3s ease; display: inline-block; }
+        .action-btn:hover { background-color: #087e9b; transform: translateY(-2px); }
+        @media (max-width: 600px) { header { padding-top: 55px; } h1 { font-size: 22px; } .back-btn { top: 15px; left: 50%; transform: translateX(-50%); } }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html" class="back-btn">← Back to SQL Tasks</a>
+        <h1>🗄️ SQL Practice - Day 2</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Task 2: Company Database &amp; Employees Table</h2>
+                <span class="badge">task2.sql</span>
+            </div>
+
+            <div class="code-box">
+                <div class="code-top-bar">
+                    <span>MySQL 8.0 &bull; company_db</span>
+                    <button class="copy-btn" onclick="copyCode(this)">📋 Copy Code</button>
+                </div>
+                <pre id="sqlCode"><span class="kw">create database</span> company_db;
+<span class="kw">use</span> company_db;
+
+<span class="kw">create table</span> employees (
+    emp_id <span class="fn">int primary key auto_increment</span>,
+    emp_name <span class="fn">varchar</span>(<span class="num">100</span>) <span class="kw">not null</span>,
+    email <span class="fn">varchar</span>(<span class="num">100</span>) <span class="kw">unique</span>,
+    salary <span class="fn">decimal</span>(<span class="num">10</span>, <span class="num">2</span>) <span class="kw">CHECK</span> (salary &gt; <span class="num">10000</span>),
+    department <span class="fn">varchar</span>(<span class="num">50</span>) <span class="kw">DEFAULT</span> <span class="str">'IT'</span>,
+    joining_date <span class="fn">date not null</span>,
+    status <span class="fn">varchar</span>(<span class="num">20</span>) <span class="kw">DEFAULT</span> <span class="str">'Active'</span>,
+    created_at <span class="fn">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span>
+);
+
+<span class="kw">desc</span> employees;</pre>
+            </div>
+
+            <div class="btn-group">
+                <a href="https://github.com/sjsarockiajenifer-ops/Frontend/blob/main/sql/day2/task2.sql" class="action-btn" target="_blank">
+                    🐙 View on GitHub
+                </a>
+                <a href="task2.sql" class="action-btn" download style="background-color: #087e9b;">
+                    📥 Download task2.sql
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyCode(btn) {
+            const text = document.getElementById('sqlCode').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const original = btn.innerText;
+                btn.innerText = '✅ Copied!';
+                setTimeout(() => { btn.innerText = original; }, 1500);
+            });
+        }
+    </script>
+
+</body>
+</html>
